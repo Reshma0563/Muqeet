@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-commerce Registration</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+</style>
+</head>
+<body bgcolor="gray">
+<div class="container">
+ <i> <h2>Delivery Details</h2>
+  <form id="registrationForm" action="#" method="post">
+    <div class="form-group">
+      <label for="firstName" placeholder="First Name">First Name:</label>
+      <input type="text" id="firstName" name="firstName" placeholder=" Enter First Name" required>
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" placeholder="Enter Last Name "required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter-id "required>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter phone Number" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter password" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" placeholder="Enter Querry......."></textarea>
+    </div>
+    <div class="form-group">
+      <label for="captcha">CAPTCHA:</label>
+      <!-- Replace with your CAPTCHA implementation -->
+      <input type="text" id="captcha" name="captcha"  placeholder="Enter captcha code "required>
+    </div>
+    <div class="form-group">
+      <button type="submit">Submit</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+	  <button type="Reset">Reset</button></i>
+    </div>
+  </form>
+</div><i>
+<a href="side.html">back to home</a></i>
+<script src="script.js">
+document.getElementById('registrationForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  // Validation code can be added here
+  
+  // Example of accessing form data:
+  const formData = new FormData(this);
+  const formDataObject = {};
+  formData.forEach((value, key) => {
+    formDataObject[key] = value;
+  });
+  
+  console.log(formDataObject);
+  
+  // Submit form data to backend or handle it as needed
+  // Replace this with actual submission logic
+  // Example: fetch('/submit', { method: 'POST', body: formData });
+});
+
+</script><i>
+</body>
+
+</html>
